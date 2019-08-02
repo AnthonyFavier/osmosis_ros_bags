@@ -1,0 +1,25 @@
+This repository gather the recorded rosbag of the osmosis experiment.
+
+The MASTER_bags contains the rosbag of the master branch.
+The FTM_bags contains the rosbag of the ftm branch.
+
+Syntax : F# : number of the injected fault
+         O or SO : Obstacles or sans obstacles (without obstacles)
+
+To lauch the record of rosbag, use the following shell line which will record every really usefull topics:
+rosbag record /mission /hmi_done /summit_xl_a/robotnik_base_control/cmd_vel /pose /clock /do_controlled_stop /do_switch_to_teleop
+
+
+Here are the arbitrary numbers of the faults :
+1-Prohibited Area
+2-CmdNotUpdated
+3-WrongValueCmd
+4-NodeCrashControl
+5-NodeCrash
+6-LocNotUpdated
+7-NodeCrashLoc
+
+
+During the obstacles tests, we used two cubes placed at the following positions :
+x=50 , y=10
+x=37.5 , y=4

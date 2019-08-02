@@ -1,2 +1,7 @@
-Lancer Python
-Lancer rosbag
+The draw_path.py is a script that draw the path of the robot during a recorded rosbag.
+It needs (in the same folder than the script):
+    - The image of the airport (blagnac.jpg)
+    - A text file "pose.txt" which could be obtained using the following shell command :
+    rostopic echo -b your_ros_bag_file.bag -p /pose > pose.txt
+
+The result is a image named "path.jpg".

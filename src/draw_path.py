@@ -37,19 +37,19 @@ image=mpimg.imread("blagnac.jpg")
 for i in range(len(LX)):
 	for epx in range(2):
 		for epy in range(2):
-			bleu=int(len(LX)-i)/9
-			vert=255-int(len(LX)-i)/9
-			image[LY[i]+epy][LX[i]+epx]=(0,vert,bleu)
-			image[LY[i]+epy][LX[i]-epx]=(0,vert,bleu)
-			image[LY[i]-epy][LX[i]+epx]=(0,vert,bleu)
-			image[LY[i]-epy][LX[i]-epx]=(0,vert,bleu)
+			blue=int(len(LX)-i)/9
+			green=255-int(len(LX)-i)/9
+			image[LY[i]+epy][LX[i]+epx]=(0,green,blue)
+			image[LY[i]+epy][LX[i]-epx]=(0,green,blue)
+			image[LY[i]-epy][LX[i]+epx]=(0,green,blue)
+			image[LY[i]-epy][LX[i]-epx]=(0,green,blue)
 
 
 xob1=int((float(50+80)*float((828/160))*1.04))
 xob2=int((float(37.5+80)*float((828/160))*1.04))
 yob1=int((80-float(10))*float((740/160))*1.15)
 yob2=int((80-float(4))*float((740/160))*1.15)
-exit()
+
 for epx in range(3):
 	for epy in range(3):
 		image[yob1+epy][xob1+epx]=(255,0,0)
@@ -62,4 +62,4 @@ for epx in range(3):
 		image[yob2-epy][xob2+epx]=(255,0,0)
 		image[yob2-epy][xob2-epx]=(255,0,0)
 
-mpimg.imsave("chemin.png",image)
+mpimg.imsave("path.png",image)
